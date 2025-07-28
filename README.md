@@ -1,36 +1,144 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Business Template
 
-## Getting Started
+A modern, production-ready Next.js starter template with essential dependencies and reusable components for business applications.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 15** with App Router and Turbopack
+- **TypeScript** for type safety
+- **Tailwind CSS v4** for styling
+- **Framer Motion** for smooth animations
+- **GSAP** for advanced animations
+- **ESLint & Prettier** for code quality
+- **Responsive design** with mobile-first approach
+
+## 📦 Core Dependencies
+
+### Production Dependencies
+
+- `next@15.4.4` - React framework
+- `react@19.1.0` & `react-dom@19.1.0` - React library
+- `@gsap/react@2.1.2` & `gsap@3.13.0` - Animation library
+- `motion@12.23.9` - Framer Motion for animations
+
+### Development Dependencies
+
+- `typescript@5` - Type safety
+- `tailwindcss@4` - Utility-first CSS framework
+- `eslint@9` & `eslint-config-next` - Code linting
+- `prettier@3.6.2` - Code formatting
+- `@types/react@19` & `@types/react-dom@19` - TypeScript types
+
+## 🧩 Core Components
+
+### `Container.tsx`
+
+A responsive container component with consistent max-width and padding:
+
+- Responsive padding: `px-4 sm:px-6 lg:px-8`
+- Max width: `max-w-screen-xl` (1400px on 2xl screens)
+- Customizable via className prop
+
+### `FadeIn.tsx`
+
+Animation components using Framer Motion:
+
+- `FadeIn` - Individual fade-in animation
+- `FadeInStagger` - Staggered fade-in animations for lists
+- Respects user's motion preferences
+- Optimized viewport detection
+
+### `SectionIntro.tsx`
+
+A reusable section header component:
+
+- Eyebrow text (small label above heading)
+- Main heading with responsive typography
+- Optional description text
+- Built-in fade-in animation
+
+### `tailwind-indicator.tsx`
+
+Development utility to show current breakpoint (only in development mode)
+
+## 🛠️ Getting Started
+
+1. **Clone or copy this template**
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+3. **Start the development server:**
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
+
+4. **Open [http://localhost:3000](http://localhost:3000)** to view your application
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── globals.css        # Global styles with Tailwind
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+└── components/            # Reusable components
+    ├── Container.tsx      # Responsive container
+    ├── FadeIn.tsx         # Animation components
+    ├── SectionIntro.tsx   # Section headers
+    └── tailwind-indicator.tsx
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Styling
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This template uses **Tailwind CSS v4** with:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Custom CSS variables for theming
+- Dark mode support
+- Responsive design utilities
+- Custom color scheme (easily customizable)
 
-## Learn More
+## 🚀 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The easiest way to deploy is using [Vercel](https://vercel.com):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 Available Scripts
 
-## Deploy on Vercel
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔧 Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Update colors** in `src/app/globals.css`
+2. **Modify components** in `src/components/`
+3. **Add new pages** in `src/app/`
+4. **Configure Tailwind** in `tailwind.config.js`
+
+## 📚 Learn More
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Framer Motion Documentation](https://www.framer.com/motion/)
+- [GSAP Documentation](https://greensock.com/docs/)
+
+---
+
+**Ready to build your next business application?** 🚀
